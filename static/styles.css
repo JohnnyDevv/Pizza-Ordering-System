@@ -1,0 +1,8 @@
+li a:link, a:visited{
+	color: #F9BA21;
+	font-weight: bold;
+}
+
+li a:hover, h2, h3{
+	color: #872F01
+}

@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+{% load fontawesome %}
+
+{% block content %}
+	<h2>Pizza Menu</h2>
+	<hr>
+	<div class="row">
+		{% for pizza in pizzas %}
+			<div class="col-3">
+				<div class="card" style="width: 83%;">
+			  	<img src="{{ pizza.thumb.url }}" class="card-img-top" alt="...">
+			  	<div class="card-body row">
+			  		<div class="col-8">
+				    	<h5 class="card-title">{{ pizza.name }}</h5>
+				    	<p class="card-text">&#8358;{{ pizza.price }}</p>
+			    	</div>
+			    	<div class="col-1">
+			    		<p></p>
+			    		<a href="#" class="text-right"><span class="oi oi-cart" aria-hidden="true"></span></a>
+			    	</div>
+			  	</div>
+			  </div>	
+			</div>  
+		{% endfor %}
+	</div>	
+{% endblock %}	
